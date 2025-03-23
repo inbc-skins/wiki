@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="content-Style-Type"/>
+<meta content="text/javascript" http-equiv="content-Script-Type"/>
+<title>GNU Backgammonの使い方 - インターネットバックギャモンクラブ（INBC）公式ホームページ</title>
+<meta content="index,follow" name="robots"/>
+<meta content="世界四大ゲームの１つ・バックギャモンというボードゲームを、新しくはじめたい人や、もっと楽しみたい人すべてに機会と情報をお届けする、INBC(インターネットバックギャモンクラブ)のホームページです。" name="description"/>
+<meta content="ボードゲーム,バックギャモン,YouTube" name="keywords"/>
+<meta content="7rACnZgt9fhJwiHXLgOLcTq-7EC4EVeGzj3l2ul_hec" name="google-site-verification"/>
+<link href="/css/default.css" rel="stylesheet" type="text/css"/>
+<link href="/css/i/n/b/inbcgammon/design.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/css/110405header_menu.css" rel="stylesheet" type="text/css"/>
+<script src="/js/default.js?20130417" type="text/javascript"></script>
+</head>
+<!-- liquid2 -->
+<body id="body_liquid2">
+<div id="block_inclusion">
+<div id="header">
+<p><a href="index.html" title="home">インターネットバックギャモンクラブ（INBC）公式ホームページ</a></p>
+</div><!--/header-->
+<div id="wrap">
+<div id="container">
+<div id="main">
+<div class="section">
+<div class="user_header page_title">
+<h1>GNU Backgammonの使い方</h1>
+</div>
+<script language="javascript" type="text/javascript">
+					$(function(){
+						var isLogin = $('#fc2wikimenu_login').length?false:true;
+						var isUnlock = $('#page_delete').length?true:false;
+						if(isLogin && isUnlock) {
+							$('h2>a.anchor_super,h3>a.anchor_super,h4>a.anchor_super').show();
+						}
+					})
+					</script>
+<div class="user_body">
+<div>（2024-03-25 <a href="/wiki/%E3%81%82%E3%82%8B%E3%81%A7%E3%82%93%E8%8C%B6" title="あるでん茶">あるでん茶</a>が作成した、書きかけのページです。ある程度形になったら、<a href="/wiki/%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1" title="解析ソフトのススメ">解析ソフトのススメ</a>からリンクします。）</div>
+<br/>
+<div>本ページは基本的にWindows版のみを想定した説明になります。</div>
+<ul>
+<li class="ulist1"> 他OS、特にMacOSへのインストールに詳しい識者をお待ちしております。</li>
+</ul>
+<br/>
+<h2 id="t159c997">入手とインストール、初期設定</h2>
+<h3 id="w7464b79">入手</h3>
+<div>GNU Backgammonは<span style="font-weight: bold;">無料</span>で入手して使うことができます(自由ソフトウェア)。現在は<a class="jump" href="https://www.gnu.org/software/gnubg/#downloading" target="_blank" title="https://www.gnu.org/software/gnubg/#downloading">こちら</a>から入手できます。</div>
+<ul>
+<li class="ulist1"><a class="jump" href="http://gnubg.org/" target="_blank" title="http://gnubg.org/">公式サイト</a>は別にあるのですが、2018年から「一時閉鎖中」の状態が継続しています。</li>
+</ul>
+<br/>
+<h3 id="ba224142">インストール</h3>
+<div>ダウンロードしたインストーラを起動して、流れに沿ってインストールしていきます。</div>
+<ul>
+<li class="ulist1">バージョン選択（使用するCPUの命令セット、SSE2とかAVXとか）で戸惑うかもしれませんが、推奨値のままで問題ありません。</li>
+<li class="ulist1">デスクトップアイコン等の選択をするときに(CLI)という選択肢が出てきますが、ほとんどの人には出番がないので、チェックを外して差し支えありません。</li>
+</ul>
+<div><img alt="gnubg108-setup-desktop-icon-checkbox.png" src="/image/gnubg108-setup-desktop-icon-checkbox.png?1742679458"/></div>
+<h3 id="e16407f3">起動と初期設定</h3>
+<div>インストールが完了すると準備は完了です。たとえばデスクトップアイコンから起動することができますが、<span style="font-weight: bold;">音量注意</span>です！</div>
+<div>一般的な環境では、<span style="font-weight: bold;">けたたましい起動音</span>がなります。</div>
+<br/>
+<div>まずは、問題の起動音を含めた環境設定をしましょう。</div>
+<br/>
+<h4 id="x827e174">1.起動音の設定（調整）</h4>
+<div>メニューバーから、<span style="font-weight: bold;">[設定(S)][オプション(O)]</span>の<span style="font-weight: bold;">[音]</span>タブで、場面ごとのサウンド再生のオンオフを設定することができます。</div>
+<div>起動音が気になる人は、再生しないようにするか（[有効]のチェックを外す）、別の音を使うように設定しましょう。</div>
+<ul>
+<li class="ulist1"> 音量だけが問題という人のために、15dB下げたfanfare.wavを置いておきます。Wikiの制限でzipファイルになっていますので、展開してお使いください。<a href="/ref/fanfare.zip" target="_blank">fanfare.zip</a></li>
+<li class="ulist1"> ちなみに、デフォルトでは解析完了時にも同じファンファーレが鳴る設定になっています。</li>
+</ul>
+<br/>
+<h4 id="aaf87e75">2.マシンリソースの設定</h4>
+<div>主に解析のときに、どのくらいのマシンリソースを使うのかを設定します。<span style="font-weight: bold;">[設定(S)][オプション(O)]</span>の<span style="font-weight: bold;">[その他]</span>タブの下の方で設定を行います。</div>
+<ul>
+<li class="ulist1"><span style="font-weight: bold;">キャッシュ</span>：GNU Backgammonがキャッシュとして使用するメモリ（RAM）の量？です。多い方が動作が速くなるはずです。イマドキのマシンであれば最大値（464MB）でも問題ないと思いますが、動作環境に合わせて調整してください。</li>
+<li class="ulist1"><span style="font-weight: bold;">評価スレッド数</span>：解析時に使用するスレッド（並行動作？）の数です。CPUのコア（論理プロセッサ数）が多いマシンでは、それに合わせて値を大きくすると解析が速くなります（大きすぎるとかえって遅くなります）。</li>
+</ul>
+<br/>
+<div>評価スレッド数の設定の効果は、メニューの<span style="font-weight: bold;">[解析(A)][評価速度]</span>で測定することができます。<small>ダイアログを閉じずに測定できればいいのになぁ。</small></div>
+<br/>
+<h4 id="n6d8b760">3.ボードの設定</h4>
+<div><span style="font-weight: bold;">[設定(S)][ボードの外観(B)]</span>で、ボードの表示をカスタマイズすることができます。ボードは2次元表示の他に3次元表示が用意されています。ボードデザインもいろいろ用意されていますので、お好みで選んでください。</div>
+<div>当然ながら3次元表示の方がマシンへの負荷が高くなります。<span style="font-weight: bold;">[全般]</span>タブの[ビデオカードの性能テスト]ボタンで、3次元表示のパフォーマンスを測定することができます。</div>
+<br/>
+<h2 id="qfb75333">CPUと対戦</h2>
+<div>「解析ソフト」とはいうものの、普通の対戦も可能です。本節ではCPU対人間の対戦を例にして説明しますが、人間同士、もしくはCPU同士の対戦もできます。</div>
+<br/>
+<h3 id="gf34f586">対戦をはじめる</h3>
+<div>メニューの<span style="font-weight: bold;">[ファイル(F)][新規(N)]</span>、もしくはツールバーの<span style="font-weight: bold;">[新規]</span>で、対戦の設定ダイアログが開きます。</div>
+<div>デフォルトではCPU対人間の設定になっているので、マッチの長さを選択して[OK]ボタンをクリックするか、ショートカットボタンでマッチの長さ（もしくは<a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E5%A4%A7%E8%BE%9E%E5%85%B8-%E3%82%A2%E3%83%B3%E3%83%AA%E3%83%9F%E3%83%86%E3%83%83%E3%83%89%E3%83%9E%E3%83%83%E3%83%81" title="バックギャモン大辞典-アンリミテッドマッチ">マネーゲーム</a>；アンリミテッドマッチの意）を選択すると対戦が始まります。</div>
+<br/>
+<h3 id="t35f5c8e">ゲーム中の操作</h3>
+<h4 id="f68e4d67">ダイスロール</h4>
+<div>ボードの右側中央部をクリックします（実際のボードで対戦するときも、向かって右側にダイスロールするのが常識（もしくはルール）となっていることに対応しています）。</div>
+<ul>
+<li class="ulist1"> Ctrl+Rでもロールできます。</li>
+</ul>
+<br/>
+<h4 id="h55f922f">チェッカームーブ</h4>
+<div>チェッカーの動かし方はいくつかありますが、基本的には主要なアプリや対戦サイトと同様です。</div>
+<ol>
+<li class="olist1"> 動かしたいチェッカーを動かしたい場所にドラッグドロップする。</li>
+<li class="olist1"> 動かしたいチェッカーをクリックする。<ul>
+<li class="ulist2"> 左クリックで大きい方の目を、右クリックで小さい方の目を優先して使います。</li>
+</ul></li>
+<li class="olist1"> ポイントメイクしたい場所を右クリックする。</li>
+</ol>
+<br/>
+<div>戻したいときは、ツールバーの<span style="font-weight: bold;">[元に戻す]</span>をクリックします（もしくはCtrl+Z）。</div>
+<div>1回ずつではなくて、ダイスロール直後の状態まで戻ります。</div>
+<br/>
+<div>ムーブを確定するときはダイスをクリックします（もしくはCtrl+F）。</div>
+<br/>
+<h4 id="v2db70e4">ダブル</h4>
+<div>打つときは、ボード上のキューブをクリックするか、ツールバーの<span style="font-weight: bold;">[ダブル]</span>をクリックします。</div>
+<ul>
+<li class="ulist1"> Ctrl+Dでもダブルできます。</li>
+</ul>
+<div>相手に「ダブル」されたときは、以下のいずれかの操作で対応します。</div>
+<ul>
+<li class="ulist1"> キューブをクリックする（左クリックでテイク、右クリックでパス）。</li>
+<li class="ulist1"> ツールバーの<span style="font-weight: bold;">[承諾]</span>でテイク、<span style="font-weight: bold;">[拒否]</span>でパス。</li>
+</ul>
+<br/>
+<h4 id="r5994882">投了</h4>
+<div>ツールバーの<span style="font-weight: bold;">[投了]</span>ボタンをクリックします。</div>
+<ul>
+<li class="ulist1">「適切な」投了であれば、何点投了かが自動的に計算されます。</li>
+<li class="ulist1">「不適切な」投了（負け方、もしくはそもそも負けることが未確定、かつポイントマッチの行方が未確定の場合）であれば、何点投了するかの選択肢が表示されます。</li>
+</ul>
+<div>相手の投了の申し出に対する対応は、ダブルを打たれたときの対応と同様です。</div>
+<br/>
+<h3 id="lca80be9">CPUの強さの調整</h3>
+<div>対戦相手のCPUのデフォルト設定は<span style="font-weight: bold;">世界クラス</span>となっていて、初心者のうちはなかなか勝てないかもしれません。負け続けると精神衛生に悪影響が及ぶ人は、CPUのレベル調整をするといいでしょう。</div>
+<br/>
+<div>対戦設定のダイアログで[プレーヤー設定の変更]ボタンをクリックし、プレイヤー0の[GNU Backgammon]の下にあるコンボボックスでレベルを選択します。</div>
+<ul>
+<li class="ulist1"> [上級者][中級者][ぬるいプレイヤー][初級者]では、CPUの選択にノイズを加えて、最善でない手を指すことがあります（[初級者]レベルだからといって、初級者の指しがちな手を模倣する、ということではないはずです）。</li>
+<li class="ulist1"> [世界クラス]より強い設定もあります。先読みの範囲や深さが広くなりますが、計算時間が長くなります(1ply深くするごとに計算時間は約21倍になります)。</li>
+</ul>
+<h3 id="ibb34db2">家庭教師モード</h3>
+<div>練習するにあたっては、対戦後に振り返るより、その場でフィードバックがあると身につきやすいかもしれません。それを実現するのが<span style="font-weight: bold;">家庭教師モード</span>です。プレイヤーがよくない手を打った直後（あるいは打つべきダブルを打たずにロールしようとしたとき）に、次のようなダイアログが表示されます。</div>
+<img alt="gnubg-tutor-advice.png" src="/image/gnubg-tutor-advice.png?1742679458"/><br/>
+<ul>
+<li class="ulist1">家庭教師モードを有効にするには、対戦設定のダイアログで[家庭教師モード]にチェックを入れるだけです。</li>
+<li class="ulist1">悪手のレベルには[疑問手][悪手][大悪手]の3つがありますが、デフォルトの家庭教師はその全てを指摘してきます。もう少し「甘い」家庭教師を望むときは、以下の手順で設定できます。<ul>
+<li class="ulist2"><span style="font-weight: bold;">[設定(S)][オプション(O)]</span>の<span style="font-weight: bold;">[家庭教師]</span>タブで、警告レベルを選択します。</li>
+</ul></li>
+</ul>
+<br/>
+<br/>
+<h2 id="tdc3a0d2">コンピュータ解析</h2>
+<div>（マネーゲームについては「セッション」という言い方をしますが、本章ではポイントマッチだけに話を絞ります。）</div>
+<br/>
+<h3 id="g2f61271">コンピュータ解析とは</h3>
+<div><span style="font-weight: bold;">コンピュータ解析</span>というのは、マッチの全ての局面において、とりうる全ての選択肢の評価値を計算し、実際の着手が最善であったか、それとも期待値を落としていたかを分析することです。バックギャモンの文脈で単に「解析」といったときは、このコンピュータ解析のことを指します。バックギャモンの世界ではすでにコンピュータが人間を凌駕しており、（まれにしか出現しない極端な局面を除いては）コンピュータ解析がバックギャモンの真実を映していると考えられています。<span style="font-weight: bold;">自身の対戦をコンピュータ解析にかけて振り返ることは、バックギャモンを上達するための最も効果的かつ効率的な方法のひとつです。</span></div>
+<br/>
+<h3 id="wdfb6fe6">コンピュータ解析の実行</h3>
+<div>GNU Backgammonでの対戦が終了した状態では、棋譜が表示されています。</div>
+<ul>
+<li class="ulist1"> 各プレイヤーに対応して2列に棋譜が並んでいます。左が奥のプレイヤー、右が手前のプレイヤーになります。<ul>
+<li class="ulist2"> ムーブの場合は、出目の後にチェッカームーブが相対法で記録されています。</li>
+<li class="ulist2"> キューブの場合はアクションが文字で表示されます。</li>
+</ul></li>
+</ul>
+<br/>
+<div>この状態でツールバーの<span style="font-weight: bold;">[解析]</span>を実行すると、マッチ全体のコンピュータ解析が行われます（もしくはメニューの[解析(A)][マッチまたはセッションを解析]を実行）。</div>
+<ul>
+<li class="ulist1"> あるいは[ファイル(F)][開く(O)]で棋譜ファイルを開いた後にツールバーの<span style="font-weight: bold;">[解析]</span>を実行すると、棋譜ファイルに記録されたマッチに対してコンピュータ解析が行われます。<ul>
+<li class="ulist2"> 対応している棋譜ファイルの形式はいくつかあります。オンライン上の対戦サイトで最も広く使われているJellyfishという形式にももちろん対応しています。</li>
+</ul></li>
+</ul>
+<br/>
+<div>コンピュータ解析が完了すると、（デフォルト設定ではファンファーレが鳴り）「すべてのゲームの統計」というダイアログが表示されます。しかしこれはいったん[OK]ボタンで閉じましょう。そしてモノクロだった棋譜がカラフルになっていることに気が付くかもしれません。</div>
+<br/>
+<h3 id="ma4f4ece">解析結果</h3>
+<div>もともと全てのムーブが黒字で表示されていましたが、解析後は違う色で表示されているものがあります。</div>
+<div>これは、そのムーブがよくなかったことを表しています。具体的には以下の3段階があります。</div>
+<ul>
+<li class="ulist1"> <span style="color: #FF0000;">赤字(??)</span>：大悪手</li>
+<li class="ulist1"> <span style="color: #0000FF;">青字(?)</span>：悪手</li>
+<li class="ulist1"> <span style="color: #11a011;">緑字(?!)</span>：疑問手</li>
+</ul>
+<br/>
+<div>色のついたムーブにカーソルを合わせてクリックしてみましょう。下の[チェッカープレイ]タブに、可能なムーブとその評価値の一覧が表示されます。基本的に上に表示されている手がよりよい手です。</div>
+<br/>
+<div>（TODO:画像を挿入）</div>
+<div>ここにはバックギャモンを理解するための情報が宝箱のように詰まっていますので、詳しく説明します。</div>
+<ul>
+<li class="ulist1"> (1)対象となるムーブが右上に太字で表示されています。 </li>
+<li class="ulist1"> (2)エクイティの絶対値と、最善手からの相対値です。相対値のマイナスが大きいと悪手などになります。<small>(エクイティの絶対値: マッチ勝率期待値を算出したのち、シングル勝ち時のマッチ勝率が+1、シングル負け時のマッチ勝率が-1になるように調整した値。正確にはマネーゲーム等価エクイティ/EMG)</small></li>
+<li class="ulist1"> (3)解析の深さです。2つの手を比較するときは、これを揃えた方がいいでしょう。</li>
+<li class="ulist1"> (4)ムーブ後の盤面の（キューブレス解析の）勝率ベクトルです。勝率、ギャモン勝ち率、バックギャモン率、敗率、ギャモン負け率、バックギャモン負け率を並べたものです（ギャモン勝ち率にはバックギャモン勝ちも含みます。ギャモン負け率も同様）。<small>([詳細]ボタンを押してある場合に表示されます)</small></li>
+</ul>
+<br/>
+<div>これらを比較することで、実戦手が最善手と比べてどのくらい悪いのか、どのように悪いのか（「勝率がほとんど上がらないのにギャモン負け率が増えている」など）を把握することができます。</div>
+<br/>
+<div>また、もともと白だった背景色が違う色になっていることがあります。これはキューブエラーを示しています（チェッカームーブの背景色は、打つべきダブルを打たなかったエラーを示しています）。これも3段階あります。</div>
+<ul>
+<li class="ulist1"> <span style="background-color:#ffff00;">黄色(??)</span>：大悪手</li>
+<li class="ulist1"> <span style="background-color:#ff80ff;">マゼンタ(?)</span>：悪手</li>
+<li class="ulist1"> <span style="background-color:#c0c0c0;">グレー(?!)</span>：疑問手</li>
+</ul>
+<br/>
+<div>背景色のついたキューブアクション等にカーソルを合わせてクリックしてみましょう。棋譜の下側（チェッカームーブであれば[キューブ判断]タブ）に局面についての詳細が表示されています。</div>
+<br/>
+<div>さらに、解析によって運も評価されています。幸運な出目は<span style="font-weight:bold;">太字</span>、不運な出目は<span style="font-style:italic;">斜体</span>になっています。</div>
+<br/>
+<div>(TBC)</div>
+<br/>
+<h3 id="s316e66e">マッチの統計</h3>
+<h3 id="w6e4a345">ポジションのセットアップ</h3>
+<div>実戦と少し違った局面、あるいはリアル対戦や配信を見て気になった局面について（動機は何でもいいのですが）、ポジションを入力してコンピュータ解析を行うことができます。手動でポジションをセットアップするには、以下の手順で行います。</div>
+<br/>
+<ol>
+<li class="olist1">ツールバーの[編集]ボタンを押します。ボードが編集モードになります（ボードがモノクロ表示になります）。</li>
+<li class="olist1">チェッカーを配置します。<ul>
+<li class="ulist2"> 左クリックで手前のプレイヤー、右クリックで奥のプレイヤーのチェッカーを配置します。</li>
+<li class="ulist2"> ポイント（二等辺三角形）の底辺付近をクリックすると0枚、頂点よりちょっと底辺側をクリックすると5枚、その中間をクリックすると場所に応じて1～4枚になります。</li>
+<li class="ulist2"> 6枚以上置く場合は、いったん5枚置いて、5枚目をクリックすると1枚ずつ増えていきます。</li>
+<li class="ulist2"> 上がり側のトレイをクリックすると、両者の全てのチェッカーがベアオフした状態になります。逆のトレイをクリックすると、初期配置になります。<ul>
+<li class="ulist3"> ボードの右下の（編集中）の文字の上の方をクリックするとこれが発動することがあるので注意しましょう（想定された挙動かどうかは不明）。</li>
+</ul></li>
+</ul></li>
+<li class="olist1">（以下必要に応じて行います）スコアを設定します。</li>
+<li class="olist1">キューブをクリックして、キューブの状態を設定します。</li>
+<li class="olist1">ボードの中央部（ダイスを振るあたり）をクリックして、ダイスを設定します。<ul>
+<li class="ulist2"> デフォルトでは初手扱いになっているかもしれません。ゾロ目を設定したいときは、編集モードを抜けてから、メニューの[ゲーム]-[ダイスの設定]で行います。</li>
+</ul></li>
+<li class="olist1">手番を設定します。メニューの[ゲーム]-[手番を設定]から行います。</li>
+<li class="olist1">ツールバーの[編集]ボタンを押して、編集モードから抜けます（ボードがカラー表示に戻ります）。</li>
+</ol>
+<br/>
+<div>ツールバーの[ヒント]ボタンを押すと、その盤面での解析結果を得ることができます（そこから対戦を始めることも可能です）。</div>
+<br/>
+<div>また手動でセットアップする代わりに、GNUbgIDやXGIDをペーストすることもできます。</div>
+<div>gnubg 1.08.002以降ではXG2でCtrl+Cでコピーした盤面でもペーストできます(XGID=の行より後ろの情報を読み飛ばすようになりました)。</div>
+<div>扱えるのは64ポイントマッチまでです。65ポイント以上のマッチのXGIDは無効なID扱いされます。</div>
+<br/>
+<h3 id="v798abed">データの蓄積</h3>
+<h2 id="e868d4ad">参考情報</h2>
+<ul>
+<li class="ulist1"> <a class="jump" href="https://discord.com/channels/768810993874108427/853621464392925203" target="_blank" title="https://discord.com/channels/768810993874108427/853621464392925203">#gnubgチャンネル</a>  ＠INBC Discord支部</li>
+</ul>
+<br/>
+</div>
+<!--/user_body-->
+<div class="modify_date">
+<ul>
+<li>最終更新:2025-02-04 10:41:57</li>
+</ul>
+</div>
+</div>
+<div id="pagetop"><a href="#header" title="このページの上へ戻る">ページトップ</a></div>
+</div>
+</div>
+<div class="menubox" id="menu">
+<div class="section" id="plg_menu">
+<div class="side_title">
+<h3>メニュー</h3>
+</div>
+<div class="menubody">
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8" title="トップページ">トップページ</a></li>
+<li class="ulist1"><a href="/wiki/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E6%96%B9%E3%81%B8%E3%81%AE%E3%81%94%E6%8C%A8%E6%8B%B6" title="はじめての方へのご挨拶">はじめての方へのご挨拶</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E5%88%9D%E5%8F%82%E5%8A%A0%E8%80%85%E5%90%91%E3%81%91%E3%82%AC%E3%82%A4%E3%83%89" title="INBC初参加者向けガイド">INBC初参加者向けガイド</a></li>
+<li class="ulist1"><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%91%8A%E7%9F%A5%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC" title="イベント告知カレンダー">イベント告知カレンダー</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E4%B8%80%E8%A6%A7%E3%83%BB%E7%99%BB%E9%8C%B2" title="メンバー一覧・登録">メンバー一覧・登録</a></li>
+<li class="ulist1"><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E9%81%8B%E5%96%B6%E8%80%85%E5%8B%9F%E9%9B%86%EF%BC%81" title="イベント運営者募集！">イベント運営者募集！</a></li>
+</ul>
+<br/>
+<h2 id="menuzea130fe">バックギャモンを始める</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB" title="バックギャモンのルール">バックギャモンのルール</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E5%A4%A7%E8%BE%9E%E5%85%B8%28%E7%94%A8%E8%AA%9E%E9%9B%86%29" title="バックギャモン大辞典(用語集)">バックギャモン大辞典(用語集)</a></li>
+</ul>
+<br/>
+<h2 id="menunf4ce504">バックギャモンの輪を広げる</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E5%AF%BE%E6%88%A6%E7%9B%B8%E6%89%8B%E3%81%AE%E8%A6%8B%E3%81%A4%E3%81%91%E6%96%B9%28%E3%83%8D%E3%83%83%E3%83%88%29" title="対戦相手の見つけ方(ネット)">対戦相手の見つけ方(ネット)</a></li>
+<li class="ulist1"><a href="/wiki/%E5%AF%BE%E6%88%A6%E7%9B%B8%E6%89%8B%E3%81%AE%E8%A6%8B%E3%81%A4%E3%81%91%E6%96%B9%28%E3%83%AA%E3%82%A2%E3%83%AB%29" title="対戦相手の見つけ方(リアル)">対戦相手の見つけ方(リアル)</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%81%AB%E9%96%A2%E9%80%A3%E3%81%99%E3%82%8BYouTube%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB" title="バックギャモンに関連するYouTubeチャンネル">YouTubeチャンネル集</a></li>
+</ul>
+<br/>
+<h2 id="menuv9904076">バックギャモンを学ぶ</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E4%B8%8A%E9%81%94%E3%81%B8%E3%81%AE%E9%81%93" title="バックギャモン上達への道">バックギャモン上達への道</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%81%AE%E6%88%A6%E7%95%A5%E3%83%BB%E6%88%A6%E8%A1%93" title="バックギャモンの戦略・戦術">基本的な戦略・戦術講座</a></li>
+</ul>
+<br/>
+<h2 id="menuh0451944">バックギャモンで競い合う</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E4%BB%8A%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E3%81%AE%E5%A4%A7%E4%BC%9A%E4%BA%88%E5%AE%9A%E3%83%BB%E7%B5%90%E6%9E%9C" title="今シーズンの大会予定・結果">今シーズンの大会予定・結果</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E5%A4%A7%E4%BC%9A%E3%81%AE%E3%81%97%E3%81%8F%E3%81%BF" title="INBC大会のしくみ">INBC大会のしくみ</a></li>
+<li class="ulist1"><a href="/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E5%84%AA%E7%A7%80%E9%81%B8%E6%89%8B%E4%B8%80%E8%A6%A7" title="過去の優秀選手一覧">過去の優秀選手一覧</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" title="INBCランキング">INBCランキング</a></li>
+</ul>
+<br/>
+<div>&lt;タイトル戦&gt;</div>
+<ul>
+<li class="ulist1"><a href="/wiki/%E9%AD%94%E7%8E%8B%E6%88%A6" title="魔王戦">魔王戦</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA%E3%82%AB%E3%83%83%E3%83%97" title="チャンピオンズカップ">チャンピオンズカップ</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E5%90%8D%E4%BA%BA%E6%88%A6%E3%83%BB%E9%8A%80%E6%B2%B3%E8%8B%B1%E9%9B%84%E6%88%A6" title="INBC名人戦・銀河英雄戦">INBC名人戦・銀河英雄戦</a></li>
+<li class="ulist1"><a href="/wiki/%E9%9F%8B%E9%A7%84%E5%A4%A9%E6%88%A6" title="韋駄天戦">韋駄天戦</a></li>
+</ul>
+<br/>
+<div>&lt;特別大会&gt;</div>
+<ul>
+<li class="ulist1"><a href="/wiki/INBC%E3%83%AA%E3%83%BC%E3%82%B0" title="INBCリーグ">INBCリーグ</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E3%82%AB%E3%83%83%E3%83%97" title="INBCカップ">INBCカップ</a></li>
+</ul>
+<br/>
+<div>&lt;すべての大会&gt;</div>
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E5%88%A5%E5%85%A8%E5%A4%A7%E4%BC%9A%E4%B8%80%E8%A6%A7" title="シーズン別全大会一覧">シーズン別全大会一覧</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%90%E3%83%AB" title="バックギャモンカーニバル">バックギャモンカーニバル</a></li>
+</ul>
+<br/>
+<h2 id="menuz525b647">関連団体</h2>
+<ul>
+<li class="ulist1"><a class="jump" href="https://vbs-backgammon.playing.wiki/" title="https://vbs-backgammon.playing.wiki/">VBS(Virtualバックギャモン協会)</a></li>
+<li class="ulist1"><a class="jump" href="https://www.internetbridgeclub.com/" title="https://www.internetbridgeclub.com/">インターネットコントラクトブリッジクラブ</a></li>
+</ul>
+<br/>
+</div>
+</div> <div class="section" id="plg_recent">
+<div class="side_title">
+<h3>最近の更新</h3>
+</div>
+<div class="menubody">
+<p class="modify_date">2025/03/22</p>
+<ul>
+<li title="更新日時:2025/03/22 20:08:57"><a href="/wiki/act-4.5">act-4.5</a></li>
+<li title="更新日時:2025/03/22 14:02:18"><a href="/wiki/%E4%BB%8A%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E3%81%AE%E5%A4%A7%E4%BC%9A%E4%BA%88%E5%AE%9A%E3%83%BB%E7%B5%90%E6%9E%9C">今シーズンの大会予定・結果</a></li>
+<li title="更新日時:2025/03/22 14:02:40"><a href="/wiki/INBC%E3%82%AB%E3%83%83%E3%83%97">INBCカップ</a></li>
+<li title="更新日時:2025/03/22 14:02:32"><a href="/wiki/act-6">act-6</a></li>
+</ul>
+<p class="modify_date">2025/03/20</p>
+<ul>
+<li title="更新日時:2025/03/20 23:11:45"><a href="/wiki/%E7%AC%AC16%E6%9C%9F%E9%9F%8B%E9%A7%84%E5%A4%A9%E6%88%A6">第16期韋駄天戦</a></li>
+</ul>
+<p class="modify_date">2025/03/18</p>
+<ul>
+<li title="更新日時:2025/03/18 12:12:07"><a href="/wiki/INBC%E4%BE%8B%E4%BC%9A">INBC例会</a></li>
+</ul>
+<p class="modify_date">2025/03/17</p>
+<ul>
+<li title="更新日時:2025/03/17 20:08:21"><a href="/wiki/INBC%E3%83%AA%E3%83%BC%E3%82%B0%E5%85%AC%E7%A4%BA">INBCリーグ公示</a></li>
+</ul>
+<p class="modify_date">2025/03/16</p>
+<ul>
+<li title="更新日時:2025/03/16 20:08:11"><a href="/wiki/Heroes%E9%81%93%E5%A0%B4%E3%83%BB%E9%9B%86%E8%A8%88">Heroes道場・集計</a></li>
+<li title="更新日時:2025/03/16 20:08:08"><a href="/wiki/Heroes%E9%81%93%E5%A0%B4">Heroes道場</a></li>
+<li title="更新日時:2025/03/16 00:12:54"><a href="/wiki/%E7%AC%AC53%E5%9B%9EINBC%E3%82%AB%E3%83%83%E3%83%97%2528%E5%8F%8C%E8%B3%BD%E6%88%A6%29">第53回INBCカップ(双賽戦)</a></li>
+</ul>
+<p class="modify_date">2025/03/15</p>
+<ul>
+<li title="更新日時:2025/03/15 23:11:40"><a href="/wiki/%E3%81%B8%E3%81%84%E3%81%94%E3%82%93">へいごん</a></li>
+<li title="更新日時:2025/03/15 23:11:22"><a href="/wiki/%E3%81%93%E3%83%BC%E3%81%8F%E3%82%93">こーくん</a></li>
+<li title="更新日時:2025/03/15 23:11:56"><a href="/wiki/%E3%81%A0%E3%82%8B%E3%81%BE">だるま</a></li>
+<li title="更新日時:2025/03/15 23:11:00"><a href="/wiki/oiton">oiton</a></li>
+<li title="更新日時:2025/03/15 23:11:26"><a href="/wiki/%E3%83%A2%E3%82%B6%E3%83%B3%E3%83%93%E3%83%BC%E3%82%AF">モザンビーク</a></li>
+</ul>
+<p class="modify_date">2025/03/13</p>
+<ul>
+<li title="更新日時:2025/03/13 16:04:05"><a href="/wiki/%E7%AC%AC54%E5%9B%9EINBC%E3%82%AB%E3%83%83%E3%83%97%2528%E5%A4%A9%E8%B3%BD%E6%88%A6%29">第54回INBCカップ(天賽戦)</a></li>
+</ul>
+<p class="modify_date">2025/03/11</p>
+<ul>
+<li title="更新日時:2025/03/11 22:10:57"><a href="/wiki/%E5%85%A8%E8%87%AA%E5%8B%95dmp%E6%9D%AF">全自動dmp杯</a></li>
+</ul>
+<p class="modify_date">2025/03/04</p>
+<ul>
+<li title="更新日時:2025/03/04 14:02:37"><a href="/wiki/Backgammon%20Studio%20Heroes%E3%81%AE%E9%81%8A%E3%81%B3%E6%96%B9">Backgammon Studio Heroesの遊び方</a></li>
+</ul>
+<p class="modify_date">2025/03/01</p>
+<ul>
+<li title="更新日時:2025/03/01 22:10:48"><a href="/wiki/61Joker">61Joker</a></li>
+<li title="更新日時:2025/03/01 21:09:59"><a href="/wiki/%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8">トップページ</a></li>
+</ul>
+</div><!-- /div.menubody -->
+</div><!-- /div#plg_recent.section-->
+</div>
+</div>
+<div id="footer">
+<p class="ad">Powered by <a href="http://wiki.fc2.com/" title="FC2WIKIホーム">FC2ウィキ 無料wikiレンタル</a></p>
+<p class="copyright">Copyright (c) インターネットバックギャモンクラブ（INBC）公式ホームページ. All Rights Reserved.</p>
+</div>
+</div><!--/block_inclusion-->
+<!-- header menu -->
+<div id="fc2wikimenu">
+<div class="fc2wikimenu_body">
+<ul id="header_menu">
+<li class="parent" id="fc2wikimenu_home"><a href="javascript:void(0);" title="クリックでメニューを開く"><span class="menuopen">FC2メニュー</span></a>
+<ul id="wikimenu_sub0">
+<li><a href="http://wiki.fc2.com" target="_blank" title="FC2WIKIトップページへ">FC2WIKIホーム</a></li>
+<li><a href="https://id.fc2.com/?done=wiki&amp;switch_language=ja" target="_blank" title="FC2WIKIトップページへ">WIKIログイン</a></li>
+<li><a href="https://id.fc2.com/" target="_blank" title="FC2WIKIトップページへ">FC2IDへ</a></li>
+</ul>
+</li>
+<li id="fc2wikimenu_login">
+<a href="/?cmd=auth&amp;page=GNU%20Backgammon%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" title="認証ページへ">WIKI編集</a>
+</li>
+</ul>
+<div id="admin_auth">
+<p>このWIKIを編集するにはパスワード入力が必要です</p>
+				認証パスワード
+				<input name="pid" type="hidden" value="17441072"/>
+<input class="password_form" name="pass" type="password" value=""/>
+<input name="mode" type="hidden" value=""/>
+<button>送信</button>
+</div>
+<div id="search_rss">
+<div class="wiki_search">
+<form action="/" method="get">
+<input name="cmd" type="hidden" value="search"/>
+<input class="search_form" name="q" type="text"/>
+<input class="search_btn" onclick="void(this.form.submit());return false" type="button" value="検索"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- /header menu -->
+</body>
+</html>
+<!-- s --><!-- 0.0237720 -->
