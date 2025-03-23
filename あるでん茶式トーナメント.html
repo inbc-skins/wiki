@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="content-Style-Type"/>
+<meta content="text/javascript" http-equiv="content-Script-Type"/>
+<title>あるでん茶式トーナメント - インターネットバックギャモンクラブ（INBC）公式ホームページ</title>
+<meta content="index,follow" name="robots"/>
+<meta content="世界四大ゲームの１つ・バックギャモンというボードゲームを、新しくはじめたい人や、もっと楽しみたい人すべてに機会と情報をお届けする、INBC(インターネットバックギャモンクラブ)のホームページです。" name="description"/>
+<meta content="ボードゲーム,バックギャモン,YouTube" name="keywords"/>
+<meta content="7rACnZgt9fhJwiHXLgOLcTq-7EC4EVeGzj3l2ul_hec" name="google-site-verification"/>
+<link href="/css/default.css" rel="stylesheet" type="text/css"/>
+<link href="/css/i/n/b/inbcgammon/design.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/css/110405header_menu.css" rel="stylesheet" type="text/css"/>
+<script src="/js/default.js?20130417" type="text/javascript"></script>
+</head>
+<!-- liquid2 -->
+<body id="body_liquid2">
+<div id="block_inclusion">
+<div id="header">
+<p><a href="index.html" title="home">インターネットバックギャモンクラブ（INBC）公式ホームページ</a></p>
+</div><!--/header-->
+<div id="wrap">
+<div id="container">
+<div id="main">
+<div class="section">
+<div class="user_header page_title">
+<h1>あるでん茶式トーナメント</h1>
+</div>
+<script language="javascript" type="text/javascript">
+					$(function(){
+						var isLogin = $('#fc2wikimenu_login').length?false:true;
+						var isUnlock = $('#page_delete').length?true:false;
+						if(isLogin && isUnlock) {
+							$('h2>a.anchor_super,h3>a.anchor_super,h4>a.anchor_super').show();
+						}
+					})
+					</script>
+<div class="user_body">
+<h2 id="q145b0be">概要</h2>
+<div>ラウンド1からラウンド3までを予選ラウンドのような扱いにしたトーナメントです。ラウンド3終了時に<span style="font-weight: bold;">2<sup>r</sup>人</span>が勝ち残り、そこからは普通の1敗失格式トーナメントとなります。<span style="font-size: 10px;">Single eliminationとDouble eliminationの中間で、Semi-double eliminationと呼ぶことにしようと目論んでいます。</span></div>
+<br/>
+<div>以下のような特徴を持ちます。</div>
+<ul>
+<li class="ulist1"> 全ての参加者は、最初の試合で敗れても敗退とはなりません。すなわち<span style="font-weight: bold;">全ての参加者に2試合を保証</span>します。</li>
+<li class="ulist1"> 抽選による<span style="font-weight: bold;">枠の有利不利の差</span>が、通常の1敗失格式トーナメントに比べて<span style="font-weight: bold;">小さくなる</span>ことが多いです（参加人数に依存します）。</li>
+<li class="ulist1"> 参加人数に応じたテンプレートを用意することにより、最初に一度抽選を行うだけであとの対戦は自動的に決まります。</li>
+</ul>
+<br/>
+<div>用途はバックギャモンに限るものではありませんが、番狂わせが起こりやすいバックギャモンと相性はいいと思います。特に（基本的に参加者の立場がフラットな）INBCの1日完結大会では上述の特徴がいい方向に作用すると思います。</div>
+<br/>
+<div><a href="/wiki/%E3%81%82%E3%82%8B%E3%81%A7%E3%82%93%E8%8C%B6" title="あるでん茶">あるでん茶</a>が独自に開発したものだと信じていますが、もしかしたら再発明かもしれません。</div>
+<ul>
+<li class="ulist1"> <a class="jump" href="https://docs.google.com/spreadsheets/d/1fJ3Z7K6cSJdtnamhDflatfezgXmq7uy1YT8x40AB2C0/edit?usp=sharing" target="_blank" title="https://docs.google.com/spreadsheets/d/1fJ3Z7K6cSJdtnamhDflatfezgXmq7uy1YT8x40AB2C0/edit?usp=sharing">トーナメントの平等度</a>：トーナメントの平等度を評価して、あるでん茶式と一敗失格式を比較しています。</li>
+</ul>
+<br/>
+<h2 id="k12df979">テンプレート</h2>
+<div><a class="jump" href="https://docs.google.com/spreadsheets/d/1g_ZCkzDyhH50lEaJTM-vusVbaR2OtofaZP7BMhg2qBc/edit?usp=sharing" target="_blank" title="https://docs.google.com/spreadsheets/d/1g_ZCkzDyhH50lEaJTM-vusVbaR2OtofaZP7BMhg2qBc/edit?usp=sharing">Googleスプレッドシート</a>として公開しています。現在、5人から42人まで対応しています。</div>
+<br/>
+<h2 id="o683cfd5">理論的実装？</h2>
+<h3 id="vfd7ae36">枠数の割り当て</h3>
+<div>全ての試合の勝率が1/2である場合に、i/8 の確率でラウンド4に進める（=i/2<sup>r+3</sup>の確率で優勝できる）枠のことを「i枠」と呼びます。</div>
+<br/>
+<ul>
+<li class="ulist1"> 参加人数Nが確定すると、Round4進出者数<span style="font-weight: bold;">2<sup>r</sup></span>を、次式で決定します。 r = min{r | 3N+1 &lt; 2<sup>r+3</sup>}<ul>
+<li class="ulist2"> このとき、 <span class="font" style="color:#000000;background-color:#ffd1d1;">3N+1 &lt; 2<sup>r+3</sup> &lt;= 4N</span>, <span class="font" style="color:#000000;background-color:#ffff99;">4N &lt; 2<sup>r+3</sup> &lt; 5N</span>, <span class="font" style="color:#000000;background-color:#cbf266;">5N &lt; 2<sup>r+3</sup> &lt; 6N</span>, <span class="font" style="color:#000000;background-color:#b4ebfa;">2<sup>r+3</sup> = 6N+2</span> のいずれかが成立します。</li>
+</ul></li>
+<li class="ulist1"> 以下のアルゴリズムにより、各参加者に割り当てるべき枠を用意します。<ol>
+<li class="olist2"> <span class="font" style="color:#000000;background-color:#ffd1d1;">3N+1 &lt; 2<sup>r+3</sup> &lt;= 4N</span> かつ<span style="font-weight: bold;">Nが偶数</span>の場合、N人に対し1人3枠または4枠を、合計2<sup>r+3</sup>枠になるように割り当てます。いわゆる<span style="font-weight: bold;">鶴亀算</span>です。</li>
+<li class="olist2"> <span class="font" style="color:#000000;background-color:#ffd1d1;">3N+1 &lt; 2<sup>r+3</sup> &lt; 4N</span> かつ<span style="font-weight: bold;">Nが奇数</span>の場合、1人に6枠を、残りの(N-1)人に対し1人3枠と4枠を、合計2<sup>r+3</sup>-6枠となるように割り当てます</li>
+<li class="olist2"> <span class="font" style="color:#000000;background-color:#ffff99;">4N &lt; 2<sup>r+3</sup> &lt; 5N</span> かつ<span style="font-weight: bold;">Nが偶数</span>の場合、N人に対し1人4枠または5枠を、合計2<sup>r+3</sup>枠になるように割り当てます。</li>
+<li class="olist2"> <span class="font" style="color:#000000;background-color:#ffff99;">4N &lt; 2<sup>r+3</sup> &lt; 5N</span> かつ<span style="font-weight: bold;">Nが奇数</span>の場合、1人に6枠を、残りの(N-1)人に対し1人4枠と5枠を、合計2<sup>r+3</sup>-6枠となるように割り当てます。</li>
+<li class="olist2"> <span class="font" style="color:#000000;background-color:#cbf266;">5N &lt; 2<sup>r+3</sup> &lt; 6N</span> の場合、N人に対し1人5枠または6枠を、合計2<sup>r+3</sup>枠になるように割り当てます。</li>
+<li class="olist2"> <span class="font" style="color:#000000;background-color:#b4ebfa;">2<sup>r+3</sup> = 6N+2</span> の場合、2人に対して7枠を、残りの(N-2)人に対して6枠を割り当てます。</li>
+</ol></li>
+<li class="ulist1"> 参加者の枠への割り当ては基本的には抽選で行いますが、何らかの実績を持つ参加者に対して優遇措置を与えることも可能です。<ul>
+<li class="ulist2">飛び抜けて有利な1枠が生じることがあるので、通常その優遇措置は1人に対して与えられます。</li>
+</ul></li>
+</ul>
+<br/>
+<div>上記bの状況でのみ、参加者間に最大2倍の格差が生じます。bとd以外では、参加者間の最大格差は1.5倍未満になります。</div>
+<div>（仕様上、4枠を持つ参加者を偶数にする必要があります。bのケースで一見不自然な6枠が1つ生じているのは、参加者数のパリティの調整を6枠で行うしかないという事情によります。）</div>
+<br/>
+<h3 id="v8e0fc2d">トーナメントの組み立て</h3>
+<div>あとは、適当に組み合わせます。</div>
+<ol>
+<li class="olist1"> 6枠の参加者を除いて、ラウンド1で同じ枠数の参加者同士が対戦します。<ul>
+<li class="ulist2"> 勝つと対戦相手から1枠を奪います。</li>
+<li class="ulist2">ただし4枠同士の対戦では2枠を奪います。</li>
+</ul></li>
+<li class="olist1"> ラウンド2では、（ラウンド1の増減の結果）2枠と6枠を持つ参加者が対戦します。基本的には同じ枠数同士の対戦となりますが、6枠vs2枠の対戦が生じることもあります。<ul>
+<li class="ulist2"> 勝つと対戦相手から2枠を奪います。8枠になるとラウンド4に進出します。0枠になると敗退です。</li>
+</ul></li>
+<li class="olist1"> ラウンド3では、（ここまでの増減の結果）4枠をもつ参加者が対戦します。<ul>
+<li class="ulist2"> 勝つとラウンド4に進出し、敗れると敗退となります。</li>
+</ul></li>
+</ol>
+<br/>
+<div>なお、2度目の同じ対戦が生じることがあります。それがなるべく後のラウンドになる確率を最大化するように実装したつもりですが、特に理論立ててはいないので、そうなっていないかもしれません。</div>
+<br/>
+<h2 id="q6719674">実施例</h2>
+<ul>
+<li class="ulist1"> <a href="/wiki/act-1" title="act-1">act-1</a></li>
+<li class="ulist1"> <a href="/wiki/act-2" title="act-2">act-2 ～EVEN hEaVEN～</a></li>
+<li class="ulist1"> <a href="/wiki/%E7%AC%AC29%E5%9B%9EINBC%E3%83%88%E3%83%BC%E3%83%8A%E3%83%A1%E3%83%B3%E3%83%88" title="第29回INBCトーナメント">第29回INBCトーナメント</a></li>
+<li class="ulist1"> <a href="/wiki/act-79" title="act-79">act-79 ～Nackを笑う者はNackにNack～</a></li>
+<li class="ulist1"> 第3回ささやカップ</li>
+<li class="ulist1"> <a href="/wiki/act-3" title="act-3">act-3 ～Itaden Heroes～</a></li>
+<li class="ulist1"> <a href="/wiki/%E7%AC%AC45%E5%9B%9EINBC%E3%82%AB%E3%83%83%E3%83%97%28%E5%A4%A9%E8%B3%BD%E6%88%A6%29" title="第45回INBCカップ(天賽戦)">第45回INBCカップ(天賽戦)</a></li>
+<li class="ulist1"> <a href="/wiki/%E8%87%AA%E5%AE%85%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B32023" title="自宅オープン2023">自宅オープン2023</a></li>
+<li class="ulist1"> にゃ王戦</li>
+<li class="ulist1"> <a href="/wiki/act-4.5" title="act-4.5">act-4.5 ～Four or Five～</a></li>
+</ul>
+<br/>
+</div>
+<!--/user_body-->
+<div class="modify_date">
+<ul>
+<li>最終更新:2024-08-03 15:57:15</li>
+</ul>
+</div>
+</div>
+<div id="pagetop"><a href="#header" title="このページの上へ戻る">ページトップ</a></div>
+</div>
+</div>
+<div class="menubox" id="menu">
+<div class="section" id="plg_menu">
+<div class="side_title">
+<h3>メニュー</h3>
+</div>
+<div class="menubody">
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8" title="トップページ">トップページ</a></li>
+<li class="ulist1"><a href="/wiki/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E6%96%B9%E3%81%B8%E3%81%AE%E3%81%94%E6%8C%A8%E6%8B%B6" title="はじめての方へのご挨拶">はじめての方へのご挨拶</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E5%88%9D%E5%8F%82%E5%8A%A0%E8%80%85%E5%90%91%E3%81%91%E3%82%AC%E3%82%A4%E3%83%89" title="INBC初参加者向けガイド">INBC初参加者向けガイド</a></li>
+<li class="ulist1"><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%91%8A%E7%9F%A5%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC" title="イベント告知カレンダー">イベント告知カレンダー</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E4%B8%80%E8%A6%A7%E3%83%BB%E7%99%BB%E9%8C%B2" title="メンバー一覧・登録">メンバー一覧・登録</a></li>
+<li class="ulist1"><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E9%81%8B%E5%96%B6%E8%80%85%E5%8B%9F%E9%9B%86%EF%BC%81" title="イベント運営者募集！">イベント運営者募集！</a></li>
+</ul>
+<br/>
+<h2 id="menuzea130fe">バックギャモンを始める</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB" title="バックギャモンのルール">バックギャモンのルール</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E5%A4%A7%E8%BE%9E%E5%85%B8%28%E7%94%A8%E8%AA%9E%E9%9B%86%29" title="バックギャモン大辞典(用語集)">バックギャモン大辞典(用語集)</a></li>
+</ul>
+<br/>
+<h2 id="menunf4ce504">バックギャモンの輪を広げる</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E5%AF%BE%E6%88%A6%E7%9B%B8%E6%89%8B%E3%81%AE%E8%A6%8B%E3%81%A4%E3%81%91%E6%96%B9%28%E3%83%8D%E3%83%83%E3%83%88%29" title="対戦相手の見つけ方(ネット)">対戦相手の見つけ方(ネット)</a></li>
+<li class="ulist1"><a href="/wiki/%E5%AF%BE%E6%88%A6%E7%9B%B8%E6%89%8B%E3%81%AE%E8%A6%8B%E3%81%A4%E3%81%91%E6%96%B9%28%E3%83%AA%E3%82%A2%E3%83%AB%29" title="対戦相手の見つけ方(リアル)">対戦相手の見つけ方(リアル)</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%81%AB%E9%96%A2%E9%80%A3%E3%81%99%E3%82%8BYouTube%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB" title="バックギャモンに関連するYouTubeチャンネル">YouTubeチャンネル集</a></li>
+</ul>
+<br/>
+<h2 id="menuv9904076">バックギャモンを学ぶ</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E4%B8%8A%E9%81%94%E3%81%B8%E3%81%AE%E9%81%93" title="バックギャモン上達への道">バックギャモン上達への道</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%81%AE%E6%88%A6%E7%95%A5%E3%83%BB%E6%88%A6%E8%A1%93" title="バックギャモンの戦略・戦術">基本的な戦略・戦術講座</a></li>
+</ul>
+<br/>
+<h2 id="menuh0451944">バックギャモンで競い合う</h2>
+<ul>
+<li class="ulist1"><a href="/wiki/%E4%BB%8A%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E3%81%AE%E5%A4%A7%E4%BC%9A%E4%BA%88%E5%AE%9A%E3%83%BB%E7%B5%90%E6%9E%9C" title="今シーズンの大会予定・結果">今シーズンの大会予定・結果</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E5%A4%A7%E4%BC%9A%E3%81%AE%E3%81%97%E3%81%8F%E3%81%BF" title="INBC大会のしくみ">INBC大会のしくみ</a></li>
+<li class="ulist1"><a href="/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E5%84%AA%E7%A7%80%E9%81%B8%E6%89%8B%E4%B8%80%E8%A6%A7" title="過去の優秀選手一覧">過去の優秀選手一覧</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0" title="INBCランキング">INBCランキング</a></li>
+</ul>
+<br/>
+<div>&lt;タイトル戦&gt;</div>
+<ul>
+<li class="ulist1"><a href="/wiki/%E9%AD%94%E7%8E%8B%E6%88%A6" title="魔王戦">魔王戦</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA%E3%82%AB%E3%83%83%E3%83%97" title="チャンピオンズカップ">チャンピオンズカップ</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E5%90%8D%E4%BA%BA%E6%88%A6%E3%83%BB%E9%8A%80%E6%B2%B3%E8%8B%B1%E9%9B%84%E6%88%A6" title="INBC名人戦・銀河英雄戦">INBC名人戦・銀河英雄戦</a></li>
+<li class="ulist1"><a href="/wiki/%E9%9F%8B%E9%A7%84%E5%A4%A9%E6%88%A6" title="韋駄天戦">韋駄天戦</a></li>
+</ul>
+<br/>
+<div>&lt;特別大会&gt;</div>
+<ul>
+<li class="ulist1"><a href="/wiki/INBC%E3%83%AA%E3%83%BC%E3%82%B0" title="INBCリーグ">INBCリーグ</a></li>
+<li class="ulist1"><a href="/wiki/INBC%E3%82%AB%E3%83%83%E3%83%97" title="INBCカップ">INBCカップ</a></li>
+</ul>
+<br/>
+<div>&lt;すべての大会&gt;</div>
+<ul>
+<li class="ulist1"><a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E5%88%A5%E5%85%A8%E5%A4%A7%E4%BC%9A%E4%B8%80%E8%A6%A7" title="シーズン別全大会一覧">シーズン別全大会一覧</a></li>
+<li class="ulist1"><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%AE%E3%83%A3%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%90%E3%83%AB" title="バックギャモンカーニバル">バックギャモンカーニバル</a></li>
+</ul>
+<br/>
+<h2 id="menuz525b647">関連団体</h2>
+<ul>
+<li class="ulist1"><a class="jump" href="https://vbs-backgammon.playing.wiki/" title="https://vbs-backgammon.playing.wiki/">VBS(Virtualバックギャモン協会)</a></li>
+<li class="ulist1"><a class="jump" href="https://www.internetbridgeclub.com/" title="https://www.internetbridgeclub.com/">インターネットコントラクトブリッジクラブ</a></li>
+</ul>
+<br/>
+</div>
+</div> <div class="section" id="plg_recent">
+<div class="side_title">
+<h3>最近の更新</h3>
+</div>
+<div class="menubody">
+<p class="modify_date">2025/03/22</p>
+<ul>
+<li title="更新日時:2025/03/22 20:08:57"><a href="/wiki/act-4.5">act-4.5</a></li>
+<li title="更新日時:2025/03/22 14:02:18"><a href="/wiki/%E4%BB%8A%E3%82%B7%E3%83%BC%E3%82%BA%E3%83%B3%E3%81%AE%E5%A4%A7%E4%BC%9A%E4%BA%88%E5%AE%9A%E3%83%BB%E7%B5%90%E6%9E%9C">今シーズンの大会予定・結果</a></li>
+<li title="更新日時:2025/03/22 14:02:40"><a href="/wiki/INBC%E3%82%AB%E3%83%83%E3%83%97">INBCカップ</a></li>
+<li title="更新日時:2025/03/22 14:02:32"><a href="/wiki/act-6">act-6</a></li>
+</ul>
+<p class="modify_date">2025/03/20</p>
+<ul>
+<li title="更新日時:2025/03/20 23:11:45"><a href="/wiki/%E7%AC%AC16%E6%9C%9F%E9%9F%8B%E9%A7%84%E5%A4%A9%E6%88%A6">第16期韋駄天戦</a></li>
+</ul>
+<p class="modify_date">2025/03/18</p>
+<ul>
+<li title="更新日時:2025/03/18 12:12:07"><a href="/wiki/INBC%E4%BE%8B%E4%BC%9A">INBC例会</a></li>
+</ul>
+<p class="modify_date">2025/03/17</p>
+<ul>
+<li title="更新日時:2025/03/17 20:08:21"><a href="/wiki/INBC%E3%83%AA%E3%83%BC%E3%82%B0%E5%85%AC%E7%A4%BA">INBCリーグ公示</a></li>
+</ul>
+<p class="modify_date">2025/03/16</p>
+<ul>
+<li title="更新日時:2025/03/16 20:08:11"><a href="/wiki/Heroes%E9%81%93%E5%A0%B4%E3%83%BB%E9%9B%86%E8%A8%88">Heroes道場・集計</a></li>
+<li title="更新日時:2025/03/16 20:08:08"><a href="/wiki/Heroes%E9%81%93%E5%A0%B4">Heroes道場</a></li>
+<li title="更新日時:2025/03/16 00:12:54"><a href="/wiki/%E7%AC%AC53%E5%9B%9EINBC%E3%82%AB%E3%83%83%E3%83%97%2528%E5%8F%8C%E8%B3%BD%E6%88%A6%29">第53回INBCカップ(双賽戦)</a></li>
+</ul>
+<p class="modify_date">2025/03/15</p>
+<ul>
+<li title="更新日時:2025/03/15 23:11:40"><a href="/wiki/%E3%81%B8%E3%81%84%E3%81%94%E3%82%93">へいごん</a></li>
+<li title="更新日時:2025/03/15 23:11:22"><a href="/wiki/%E3%81%93%E3%83%BC%E3%81%8F%E3%82%93">こーくん</a></li>
+<li title="更新日時:2025/03/15 23:11:56"><a href="/wiki/%E3%81%A0%E3%82%8B%E3%81%BE">だるま</a></li>
+<li title="更新日時:2025/03/15 23:11:00"><a href="/wiki/oiton">oiton</a></li>
+<li title="更新日時:2025/03/15 23:11:26"><a href="/wiki/%E3%83%A2%E3%82%B6%E3%83%B3%E3%83%93%E3%83%BC%E3%82%AF">モザンビーク</a></li>
+</ul>
+<p class="modify_date">2025/03/13</p>
+<ul>
+<li title="更新日時:2025/03/13 16:04:05"><a href="/wiki/%E7%AC%AC54%E5%9B%9EINBC%E3%82%AB%E3%83%83%E3%83%97%2528%E5%A4%A9%E8%B3%BD%E6%88%A6%29">第54回INBCカップ(天賽戦)</a></li>
+</ul>
+<p class="modify_date">2025/03/11</p>
+<ul>
+<li title="更新日時:2025/03/11 22:10:57"><a href="/wiki/%E5%85%A8%E8%87%AA%E5%8B%95dmp%E6%9D%AF">全自動dmp杯</a></li>
+</ul>
+<p class="modify_date">2025/03/04</p>
+<ul>
+<li title="更新日時:2025/03/04 14:02:37"><a href="/wiki/Backgammon%20Studio%20Heroes%E3%81%AE%E9%81%8A%E3%81%B3%E6%96%B9">Backgammon Studio Heroesの遊び方</a></li>
+</ul>
+<p class="modify_date">2025/03/01</p>
+<ul>
+<li title="更新日時:2025/03/01 22:10:48"><a href="/wiki/61Joker">61Joker</a></li>
+<li title="更新日時:2025/03/01 21:09:59"><a href="/wiki/%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8">トップページ</a></li>
+</ul>
+</div><!-- /div.menubody -->
+</div><!-- /div#plg_recent.section-->
+</div>
+</div>
+<div id="footer">
+<p class="ad">Powered by <a href="http://wiki.fc2.com/" title="FC2WIKIホーム">FC2ウィキ 無料wikiレンタル</a></p>
+<p class="copyright">Copyright (c) インターネットバックギャモンクラブ（INBC）公式ホームページ. All Rights Reserved.</p>
+</div>
+</div><!--/block_inclusion-->
+<!-- header menu -->
+<div id="fc2wikimenu">
+<div class="fc2wikimenu_body">
+<ul id="header_menu">
+<li class="parent" id="fc2wikimenu_home"><a href="javascript:void(0);" title="クリックでメニューを開く"><span class="menuopen">FC2メニュー</span></a>
+<ul id="wikimenu_sub0">
+<li><a href="http://wiki.fc2.com" target="_blank" title="FC2WIKIトップページへ">FC2WIKIホーム</a></li>
+<li><a href="https://id.fc2.com/?done=wiki&amp;switch_language=ja" target="_blank" title="FC2WIKIトップページへ">WIKIログイン</a></li>
+<li><a href="https://id.fc2.com/" target="_blank" title="FC2WIKIトップページへ">FC2IDへ</a></li>
+</ul>
+</li>
+<li id="fc2wikimenu_login">
+<a href="/?cmd=auth&amp;page=%E3%81%82%E3%82%8B%E3%81%A7%E3%82%93%E8%8C%B6%E5%BC%8F%E3%83%88%E3%83%BC%E3%83%8A%E3%83%A1%E3%83%B3%E3%83%88" title="認証ページへ">WIKI編集</a>
+</li>
+</ul>
+<div id="admin_auth">
+<p>このWIKIを編集するにはパスワード入力が必要です</p>
+				認証パスワード
+				<input name="pid" type="hidden" value="17326345"/>
+<input class="password_form" name="pass" type="password" value=""/>
+<input name="mode" type="hidden" value=""/>
+<button>送信</button>
+</div>
+<div id="search_rss">
+<div class="wiki_search">
+<form action="/" method="get">
+<input name="cmd" type="hidden" value="search"/>
+<input class="search_form" name="q" type="text"/>
+<input class="search_btn" onclick="void(this.form.submit());return false" type="button" value="検索"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- /header menu -->
+</body>
+</html>
+<!-- s --><!-- 0.0588078 -->
